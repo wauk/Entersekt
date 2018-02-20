@@ -33,4 +33,9 @@ Visit http://localhost:8080 in your browser
 > - Will be nice if you can git tag the tasks by number
 
 ### Solution
-Explain what you have done here and why...
+Task 1 
+-Seperated the todo-list logic from the express framework to loosely couple it and make it unit testable.
+-Implemented requirement #4.
+
+
+

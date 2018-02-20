@@ -4,7 +4,20 @@
     <head>
         <title>My todolist</title>
         <style>
-            a {text-decoration: none; color: black;}
+			.btn-clear 
+			{
+				text-decoration: none; 
+				color: black;
+				background: none;
+				border: none;
+				padding: 0;
+				font: inherit;
+				cursor: pointer;
+				outline: inherit;
+			}
+			.inline {display: inline;}
+			.hover-pointer { cursor: pointer; }
+			.padd-L-5 {padding-left: 5px;}
         </style>
     </head>
 
@@ -12,7 +25,13 @@
         <h1>My todolist</h1>
         <ul>
         <% todolist.forEach(function(todo, index) { %>
-            <li><a href="/todo/delete/<%= index %>">✘</a> <%- todo %></li>
+            <li>
+				<form action="/todo/edit/<%= index %>" method="post" class="inline">
+					<input type="text" name="editTodo" value="<%- todo.name %>"/>
+					<button type="submit" class="btn-clear padd-L-5">✔</button>
+				</form>
+				<a href="/todo/delete/<%= index %>" class="btn-clear padd-L-5">✘</a>
+			</li>
         <% }); %>
         </ul>
 
