@@ -85,5 +85,17 @@ describe('Test the todo list models.', function() {
 	  //Assert
 	  assert.equal("foo", todoList.list()[0].name);
     });
+	
+	it('Encodes html to avoid Cross Site Scripting', function() {
+      //Arrange
+	  let todoList = new TodoCache();
+	  let todoItem1 = new TodoItem("<script>console.log(\"foo\");</script>");
+	  
+	  //Act
+	  todoList.insert(todoItem1);
+	  
+	  //Assert
+	  assert.equal("&lt;script&gt;console.log(&quot;foo&quot;);&lt;/script&gt;", todoList.list()[0].name);
+    });
 
 });
