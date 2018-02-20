@@ -1,3 +1,5 @@
+var htmlencode = require('htmlencode');
+
 module.exports = class TodoItem {
 
 	constructor(todoItem) {
@@ -9,6 +11,6 @@ module.exports = class TodoItem {
 	}
 
 	set name(value) {
-		this._name = value;
+		this._name = htmlencode.htmlEncode(value);
 	}
 }

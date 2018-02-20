@@ -45,7 +45,13 @@ Task 2
 -fixed a bug that the test exposed.
 
 Task 3
--Dockerized the node js web app. 
+-Dockerized the node js web app.
+
+Task 4
+-Added nyc test coverage for mocha.
+
+Task 5
+-Fixed the XSS Vulnerability by encoding the content that gets displayed. 
 
 
 
