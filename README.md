@@ -10,6 +10,9 @@
 ### Run
 `node app.js`
 
+### Test
+npm test
+
 Visit http://localhost:8080 in your browser
 
 ### High level application requirements
@@ -36,6 +39,10 @@ Visit http://localhost:8080 in your browser
 Task 1 
 -Seperated the todo-list logic from the express framework to loosely couple it and make it unit testable.
 -Implemented requirement #4.
+
+Task 2
+-Added Mocha test framework to unit test the models.
+-fixed a bug that the test exposed.
 
 
 
