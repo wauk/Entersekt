@@ -44,5 +44,8 @@ Task 2
 -Added Mocha test framework to unit test the models.
 -fixed a bug that the test exposed.
 
+Task 3
+-Dockerized the node js web app. 
+
 
 
