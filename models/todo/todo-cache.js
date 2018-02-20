@@ -9,8 +9,7 @@ module.exports = class TodoCache {
 	}
 
 	update(index, item) {
-		console.log(item);
-		if (typeof item !== "undefined" && item != '') {
+		if (typeof item !== "undefined" && item.name != '') {
 			this._todoItems[index] = item;
 		}
 	}
