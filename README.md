@@ -13,6 +13,14 @@
 ### Test
 npm test
 
+### Docker build
+## Build
+docker build -t my-todo-list .
+
+## Run
+docker run -p 49160:8080 -d my-todo-list
+
+
 Visit http://localhost:8080 in your browser
 
 ### High level application requirements
